@@ -2,6 +2,8 @@
 title: The Window
 image: /images/the-window.svg
 order: 3
+sold: true
+buy_url: "#"
 ---
 
 Birds go by like little thoughts

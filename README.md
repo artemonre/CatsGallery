@@ -22,5 +22,15 @@ Live site: https://artemonre.github.io/CatsGallery/
 
 3. Commit and push. The page appears at `/works/sleepy/` in a minute or two.
 
+## Marking a work as sold
+
+Add `sold: true` to the work's header (between the `---` lines). A "Sold" badge appears
+next to the title, and the Buy button (if any) is hidden. Remove the line to undo.
+
+## Buy button
+
+Add `buy_url: https://...` to a work's header to show a Buy button linking to that address.
+It is hidden automatically when the work is sold.
+
 The **file name** is the page's URL. Don't rename it after printing a QR code;
 the title, image and poem can be changed freely. `order` sets the position in the gallery.
