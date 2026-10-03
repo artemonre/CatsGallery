@@ -2,7 +2,11 @@
 layout: default
 ---
 <article class="work">
-  <img class="work-image" src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+  <img class="work-image" src="{{ page.image | relative_url }}" alt="{{ page.title }}"
+       onclick="document.getElementById('viewer').showModal()">
+  <dialog id="viewer" class="viewer" onclick="this.close()">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+  </dialog>
   <h1 class="work-title">
     {{ page.title }}
     {% if page.sold %}<span class="stamp">Sold</span>{% endif %}
