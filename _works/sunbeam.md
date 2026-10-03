@@ -2,7 +2,6 @@
 title: Sunbeam
 image: /images/sunbeam.svg
 order: 1
-buy_url: "#"
 ---
 
 A square of gold upon the floor,

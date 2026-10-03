@@ -3,12 +3,16 @@ layout: default
 ---
 <article class="work">
   <img class="work-image" src="{{ page.image | relative_url }}" alt="{{ page.title }}">
-  <h1 class="work-title">{{ page.title }}{% if page.sold %} <span class="badge">Sold</span>{% endif %}</h1>
   <div class="poem">
     {{ content }}
   </div>
-  {% unless page.sold %}{% if page.buy_url %}
-  <a class="buy" href="{{ page.buy_url }}">Buy</a>
-  {% endif %}{% endunless %}
+  {% unless page.sold %}
+  <details class="more">
+    <summary class="button">Buy</summary>
+    <div class="more-content">
+      <p>Purchase details coming soon.</p>
+    </div>
+  </details>
+  {% endunless %}
   <a class="back" href="{{ '/' | relative_url }}">← All works</a>
 </article>
