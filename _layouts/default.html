@@ -10,12 +10,6 @@
 <body>
   <header class="site-header">
     <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
-    {% if page.collection == "works" %}
-    <h1 class="work-title">
-      {{ page.title }}
-      {% if page.sold %}<span class="stamp">Sold</span>{% endif %}
-    </h1>
-    {% endif %}
     <span class="site-author">{{ site.author }}</span>
   </header>
   <main>
