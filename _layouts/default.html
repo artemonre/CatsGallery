@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 }}">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
+    <span class="site-author">{{ site.author }}</span>
+  </header>
+  <main>
+    {{ content }}
+  </main>
+  <footer class="site-footer">© {{ site.time | date: "%Y" }} {{ site.author }}</footer>
+</body>
+</html>

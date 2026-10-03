@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<ul class="gallery">
+  {% assign works = site.works | sort: "order" %}
+  {% for work in works %}
+  <li>
+    <a href="{{ work.url | relative_url }}">
+      <img src="{{ work.image | relative_url }}" alt="{{ work.title }}" loading="lazy">
+      <span>{{ work.title }}</span>
+    </a>
+  </li>
+  {% endfor %}
+</ul>

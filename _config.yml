@@ -1,0 +1,20 @@
+title: Cats Gallery
+author: Author Name
+description: Pictures and poems.
+
+# Site address. If the repo is renamed or a custom domain is added, update these.
+url: "https://artemonre.github.io"
+baseurl: "/CatsGallery"
+
+collections:
+  works:
+    output: true
+    # The URL comes from the file name in _works/, e.g. _works/sunbeam.md -> /works/sunbeam/
+    # Changing a work's title does not change its URL, so printed QR codes keep working.
+    permalink: /works/:name/
+
+defaults:
+  - scope:
+      type: works
+    values:
+      layout: work
