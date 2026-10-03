@@ -4,9 +4,10 @@
   --muted: #8a8580;
   --line: #e6e1da;
   --stamp: #c0392b;
+  --stamp-bg: rgba(250, 248, 245, .8);
 }
 @media (prefers-color-scheme: dark) {
-  :root { --bg: #1c1b1a; --text: #e8e4de; --muted: #9a948c; --line: #34312e; --stamp: #e8604c; }
+  :root { --bg: #1c1b1a; --text: #e8e4de; --muted: #9a948c; --line: #34312e; --stamp: #e8604c; --stamp-bg: rgba(28, 27, 26, .8); }
 }
 * { box-sizing: border-box; }
 body {
@@ -50,9 +51,9 @@ main { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
   position: absolute; left: 50%; top: 50%;
   transform: translate(-50%, -50%) rotate(-12deg);
   padding: 2px 14px; border: 3px solid var(--stamp); border-radius: 6px;
-  color: var(--stamp); font-family: sans-serif; font-weight: bold; font-size: 1.4rem;
+  background: var(--stamp-bg); color: var(--stamp); font-family: sans-serif; font-weight: bold; font-size: 1.4rem;
   letter-spacing: .15em; text-transform: uppercase; white-space: nowrap;
-  opacity: .85; pointer-events: none;
+  pointer-events: none;
 }
 .poem { margin-top: 16px; }
 .poem p { white-space: pre-line; margin: 0 0 1.4em; font-size: 1.1rem; }
